@@ -9,6 +9,7 @@ A boiler plate for thingboard stuff, to be included in PlatformIO projects.
   is the XXXXXXXXXXXXX in https://eu.thingsboard.cloud/api/v1/XXXXXXXXXXXXXXXXX/telemetry
   This will publish the telemetry to thing Board.
 
+See examples/ for inspiration
 
 ## TELEMETRY
 The telemetry is organized as the STelemetry struct, and a protected member of the class for easy access. You are free to use any other thing, as the class does not actually expect you to use it. Just make sure that whatever readTelemetryData writes, buildJson can read.
