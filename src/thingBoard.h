@@ -99,8 +99,9 @@ class ITelemetry {
     void setVerbose(bool verbose) {
       this->verbose = verbose;
     }
+
     // log the given message to the serial console if verbose mode is enabled. if newLine is true, a new line will be printed after the message
-    void log(char* message, bool newLine = true) {
+    void log(const char* message, bool newLine = true) {
       if (verbose) {
         Serial.print(message);
         if (newLine) Serial.println();
