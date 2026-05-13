@@ -1,0 +1,26 @@
+{
+  "name": "thingboard-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate for sending telemetry to Thing Board from an esp32 device.",
+  "keywords": "boilerplate, iot, things, thingboard",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/hdemik/thingboard-boilerplate.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Hartog C. de Mik",
+      "email": "hartog.de.mik@gmail.com",
+      "url": "https://bsky.app/profile/le-hartog.bsky.social",
+      "maintainer": true
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bblanchon/ArduinoJson": "^7.2.2"
+  },
+  "frameworks": "arduino",
+  "platforms": "esp32"
+}
