@@ -54,6 +54,7 @@ const char* root_ca = \
 */
 
 class ITelemetry {
+  WiFiClientSecure client;
 
   // as more telemetry is added, this struct can be extended to hold it
   struct STelemetry {
@@ -67,9 +68,6 @@ class ITelemetry {
     bool verbose = false;
 
   public:
-    // setup the network stuff
-    WiFiClientSecure client;
-
     // abstract methods to be implemented by the user
     virtual JsonDocument buildJson() = 0;
     virtual bool readTelemetryData() = 0;
@@ -92,7 +90,12 @@ class ITelemetry {
       return true;
     }
 
-    // set the verbose mode for logging.
+    // if you don't want to use the connectWifi method, use this method to provide your own connected client.
+    void setWifiClient(WiFiClientSecure client) {
+      this->client = client;
+    }
+
+    // set the verbose mode for logging. Default false.
     void setVerbose(bool verbose) {
       this->verbose = verbose;
     }
