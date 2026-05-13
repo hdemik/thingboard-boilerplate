@@ -54,8 +54,6 @@ const char* root_ca = \
 */
 
 class ITelemetry {
-  const char* ssid     = "the-mix-wifi-6";
-  const char* password = "The new silly passw0rd 678";
 
   // as more telemetry is added, this struct can be extended to hold it
   struct STelemetry {
@@ -79,7 +77,7 @@ class ITelemetry {
     virtual ~ITelemetry() = default;
 
     // connect to wifi. if not successful after 20 seconds, returns false
-    virtual bool connectWifi() {
+    virtual bool connectWifi(const char* ssid, const char* password) {
       WiFi.begin(ssid, password);
 
       log("Connecting to WiFi", false);
